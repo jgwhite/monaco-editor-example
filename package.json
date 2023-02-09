@@ -56,6 +56,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-qunit": "^7.3.4",
     "loader.js": "^4.7.0",
+    "monaco-editor": "^0.35.0",
+    "monaco-editor-webpack-plugin": "^7.0.1",
     "prettier": "^2.8.3",
     "qunit": "^2.19.3",
     "qunit-dom": "^2.0.0",

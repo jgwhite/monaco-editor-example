@@ -1,10 +1,27 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
-    // Add options here
+    autoImport: {
+      webpack: {
+        module: {
+          rules: [
+            {
+              test: /\.ttf$/,
+              type: 'asset/resource',
+            },
+          ],
+        },
+        plugins: [
+          new MonacoWebpackPlugin({
+            languages: ['hcl'],
+          }),
+        ],
+      },
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
